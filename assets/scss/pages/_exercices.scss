@@ -3,4 +3,103 @@
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
 
-// TEST push
+body {
+    background-color: #f2f2e9;
+}
+
+
+#breath {
+    @include mixin.flex(column, flex-start, center);
+    height: 40rem;
+
+    .container {
+        width: 1750px;
+        @include mixin.flex(column, center, center);
+        padding-top: 110px;
+        text-align: center;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            padding-top: 20px;
+            opacity: .6;
+        }
+    }
+
+    .btn_stone_bg {
+        margin-top: 5rem;
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        z-index: 1;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 130px;
+        }
+
+        img:nth-child(1) {
+            top: -10%;
+            left: 50%;
+            transform: translate((-50%));
+        }
+
+        img:nth-child(2) {
+            top: -10%;
+            left: 51%;
+            transform: translate((-50%));
+        }
+
+        img:nth-child(3) {
+            top: 20%;
+            left: 51%;
+            transform: translate((-50%));
+        }
+
+        // img:nth-child(2) {
+            
+        // }
+    }
+}
+
+#exercices {
+    background-color: var.$couleur-principal;
+    height: 60rem;
+}
+
+
+
+
+
+#popup {
+    display: none;
+}
+
+
+
+
+// .circle {
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 50%;
+//     background-color: #3b5049;
+//     animation: breathe 8s ease-in-out infinite;
+//   }
+
+// keyframes
+
+// @keyframes breathe {
+//     0%, 100% {
+//       transform: scale(1);
+//       background-color: #3b5049; 
+//     }
+//     50% {
+//       transform: scale(1.5);
+//       background-color: #c6cdc4; 
+//     }
+//   }

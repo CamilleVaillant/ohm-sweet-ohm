@@ -4,15 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- JAVASCRIPT -->
      <script src="assets/js/exercice.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <header></header>
-    <section id="breath"></section>
-    <section id="exercices"></section>
+    <section id="breath">
+        <div class="container">
+            <div class="breath_title">
+            <h2>Calme et sérénité en une respiration</h2>
+            <p>Cliquez sur la zen stone pour commencer l'expérience</p>
+            </div>
+            <div class="btn_stone_bg">
+                <!-- HOVER =  scale(1.1 / 1.2) pour les stones + rotations -->
+                 <!--  -->
+                 <a href="" id="stone_btn">
+                    <div class="stone_wrapper">
+                        <img src="assets/img/stone1.png" alt="Pierre de base de la zen stone utilisée en bouton">
+                        <img src="assets/img/stone2.png" alt="Seconde pierre de la zen stone utilisée en bouton">
+                        <img src="assets/img/stone4.png" alt="Dernière pierre de la zen stone utilisée en bouton">
+                    </div>
+                </a>
+                <div class="wave_background"></div>
+            </div>        
+        </div>
+        <section id="breath_game">
+            <!-- position absolute left0 bottom 50% translate 50% -->
+             <!-- Display none de base puis changement  -->
+            <div id="popup">
+                <div class="popup_head">
+                    <h2>Respirez pleinement</h2>
+                    <!-- btn bg color F2F2E9 + padding -->
+                    <a href="" id="popup_close""><</a>
+                </div>
+                <div class="popup_detail">
+                    <p>Découvrez la puissance de la cohérence cardiaque pour un bien-être immédiat.Libérez votre esprit du stress quotidien et retrouvez équilibre et sérénité en quelques minutes seulement. Grâce à notre exercice de respiration en cohérence cardiaque, vous allez synchroniser votre respiration avec votre rythme cardiaque, apportant ainsi calme intérieur et apaisement profond.</p>
+                </div>
+                <!-- margin 3/5%  -->
+                 <!-- bg image à rajouter un truc sobre -->
+                <div id="setupBreath" class="game_setup_container">
+                    <div class="setup_card">
+                        <div class="setup_line" id="setupTime">
+                            <h3>Durée</h3>
+                            <input type="text" id="time" name="time" placeholder="Entrez un temps en minutes" min="1">
+                            <p id="timeError"></p>
+                        </div>
+                        <div class="setup_line" id="setupVocal">
+                            <h3>Guide vocal</h3>
+                            <label for="vocal">
+                                <input type="checkbox" id="vocal" name="vocal"> Activer
+                            </label>
+                        </div>
+                        <div class="setup_line" id="setupMusic">
+                            <h3>Musique</h3>
+                            <label for="music">
+                                <input type="checkbox" id="music" name="music"> Activer
+                            </label>
+                        </div>
+                        <button type="submit" id="setupValidBtn">Enregistrer</button>
+                    </div>
+                </div>
+                <h2>Cohérence cardiaque</h2>
+                <div class="circle"></div>
+            </div>
+        </section>
+    </section>
+    <section id="exercices">
+        <div class="container">
+            <div class="exercices_title">
+                <h2>Exercices du jour</h2>
+                <ul id="calendar">
+                    <!-- Hover = font vert foncée + léger scale -->
+                    <li class="calendar_day_btn">LUNDI</li>
+                    <li class="calendar_day_btn">MARDI</li>
+                    <li class="calendar_day_btn">MERCREDI</li>
+                    <li class="calendar_day_btn">JEUDI</li>
+                    <li class="calendar_day_btn">VENDREDI</li>
+                    <li class="calendar_day_btn">SAMEDI</li>
+                    <li class="calendar_day_btn">DIMANCHE</li>
+                </ul>
+            </div>
+            <div class="exercices_card_container">
+                <!-- Pour chaque card = image en background de la card -->
+                <div class="exercice_card">
+                    <div class="EC_content">
+                        <h3 class="EC_title"></h3>
+                        <p class="EC_text"></p>
+                    </div>
+                </div>
+                <div class="exercice_card">
+                    <div class="EC_content">
+                        <h3 class="EC_title"></h3>
+                        <p class="EC_text"></p>
+                    </div>
+                </div>
+                <div class="exercice_card">
+                    <div class="EC_content">
+                        <h3 class="EC_title"></h3>
+                        <p class="EC_text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg_white_banner"></div>
 </body>
 <footer></footer>
 </html>
