@@ -5,71 +5,124 @@
 
 body {
     background-color: #f2f2e9;
+
+
+    h2 {
+        font-size: 3rem;
+        color: var.$couleur-logo;
+        padding-top: 110px;
+    }
+
+    h3 {
+        font-weight: normal;
+        color: var.$couleur-logo;
+    }
 }
 
 
 #breath {
     @include mixin.flex(column, flex-start, center);
-    height: 40rem;
+    height: 750px;
+    background-image: url("../img/bg_wave.svg");
+    background-size: cover;
 
     .container {
-        width: 1750px;
+        width: 100%;
         @include mixin.flex(column, center, center);
-        padding-top: 110px;
         text-align: center;
 
-        h2 {
-            font-size: 3rem;
-        }
-
-        p {
+        h3 {
             font-size: 1.5rem;
-            padding-top: 20px;
+            padding-top: 1rem;
             opacity: .6;
+            color: var.$couleur-logo;
         }
     }
 
     .btn_stone_bg {
-        margin-top: 5rem;
-        background-color: white;
-        width: 200px;
-        height: 200px;
+        margin-top: 3rem;
+        background-color: #fbfbf2;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         z-index: 1;
         position: relative;
+        transition: .5s ease-in-out;
 
         img {
             position: absolute;
             width: 130px;
-        }
-
-        img:nth-child(1) {
-            top: -10%;
-            left: 50%;
-            transform: translate((-50%));
-        }
-
-        img:nth-child(2) {
-            top: -10%;
+            top: 0%;
             left: 51%;
             transform: translate((-50%));
+            transition: .5s ease-in-out;
+            // animation-delay: ;
         }
+// déplacer les hover sur le parent en indiquant le mouvement sur le child
+        img:nth-child(1) {
+
+            &:hover {
+                top: -1%;
+            }
+        }
+
+        img:hover:nth-child(2) {
+            transform: translate3d(1, 1, 1, 45deg);
+            top: -3%;
+            left: 45%;
+        }
+
+           
+        
 
         img:nth-child(3) {
-            top: 20%;
+            top: 24%;
             left: 51%;
             transform: translate((-50%));
+
+            &:hover {
+                transform: translate3d(-1, -1, -1, 45deg);
+                top: 20%;
+                left: 66%;
+            }
         }
 
-        // img:nth-child(2) {
-            
-        // }
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
+// PARTIE EXERCICES 
+
 #exercices {
+    @include mixin.flex(column, flex-start, center);
     background-color: var.$couleur-principal;
     height: 60rem;
+
+    .container {
+        width: 100%;
+        @include mixin.flex;
+        text-align: center;
+    }
+
+    ul {
+        @include mixin.flex;
+        gap: 50px;
+        margin-top: 3rem;
+
+        a {
+            display: block;
+            color: var.$couleur-logo;
+            font-weight:700;
+            cursor: pointer;
+            transition: .3s ease;
+            
+            &:hover {
+                color: var.$couleur-bg;
+            }
+        }
+    } 
 }
 
 
@@ -93,6 +146,18 @@ body {
 
 // keyframes
 
+// ANIMATION ZEN STONES
+
+
+
+
+
+
+
+
+
+// ANIMATION CERCLE RESPIRATION
+
 // @keyframes breathe {
 //     0%, 100% {
 //       transform: scale(1);
@@ -102,4 +167,4 @@ body {
 //       transform: scale(1.5);
 //       background-color: #c6cdc4; 
 //     }
-//   }
+//   } 

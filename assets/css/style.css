@@ -12,63 +12,112 @@
 body {
   background-color: #f2f2e9;
 }
+body h2 {
+  font-size: 3rem;
+  color: #3b5049;
+  padding-top: 110px;
+}
+body h3 {
+  font-weight: normal;
+  color: #3b5049;
+}
 
 #breath {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 40rem;
+  height: 750px;
+  background-image: url("../img/bg_wave.svg");
+  background-size: cover;
 }
 #breath .container {
-  width: 1750px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 110px;
   text-align: center;
 }
-#breath .container h2 {
-  font-size: 3rem;
-}
-#breath .container p {
+#breath .container h3 {
   font-size: 1.5rem;
-  padding-top: 20px;
+  padding-top: 1rem;
   opacity: 0.6;
+  color: #3b5049;
 }
 #breath .btn_stone_bg {
-  margin-top: 5rem;
-  background-color: white;
-  width: 200px;
-  height: 200px;
+  margin-top: 3rem;
+  background-color: #fbfbf2;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   z-index: 1;
   position: relative;
+  transition: 0.5s ease-in-out;
 }
 #breath .btn_stone_bg img {
   position: absolute;
   width: 130px;
-}
-#breath .btn_stone_bg img:nth-child(1) {
-  top: -10%;
-  left: 50%;
-  transform: translate(-50%);
-}
-#breath .btn_stone_bg img:nth-child(2) {
-  top: -10%;
+  top: 0%;
   left: 51%;
   transform: translate(-50%);
+  transition: 0.5s ease-in-out;
+}
+#breath .btn_stone_bg img:nth-child(1):hover {
+  top: -1%;
+}
+#breath .btn_stone_bg img:hover:nth-child(2) {
+  transform: translate3d(1, 1, 1, 45deg);
+  top: -3%;
+  left: 45%;
 }
 #breath .btn_stone_bg img:nth-child(3) {
-  top: 20%;
+  top: 24%;
   left: 51%;
   transform: translate(-50%);
+}
+#breath .btn_stone_bg img:nth-child(3):hover {
+  transform: translate3d(-1, -1, -1, 45deg);
+  top: 20%;
+  left: 66%;
+}
+#breath .btn_stone_bg:hover {
+  transform: scale(1.1);
 }
 
 #exercices {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #cde6c7;
   height: 60rem;
+}
+#exercices .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#exercices ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 3rem;
+}
+#exercices ul a {
+  display: block;
+  color: #3b5049;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#exercices ul a:hover {
+  color: #f2f2e9;
 }
 
 #popup {
