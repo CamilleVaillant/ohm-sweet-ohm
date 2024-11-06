@@ -2,3 +2,10 @@
 
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
+
+.container{
+    max-width: 1750 px;
+}
+body {
+    background-color: var.$couleur-bg;
+}

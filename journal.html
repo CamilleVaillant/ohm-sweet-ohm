@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="efr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,84 @@
     <title>Document</title>
 </head>
 <body>
-    <header></header>
-    <section id="my_journal"></section>
+    <section id="my_journal">
+        <div class="container">
+
+
+            <!-- container complet dédier au responcive -->
+
+            <h2>Votre Journal De Gratitude.</h2>
+
+            <label for="Date">Date</label>
+            <input type="date" id="Date" name="Date">
+
+            <!-- debut de page avec une div dédier a chaque partie customisable part l'utilisateur -->
+
+
+
+            <div class="happy-time">
+                <h3>Moments heureux :</h3>
+                <textarea id="happy-time-content" name="happy-time"></textarea>
+            </div>
+
+            <div class="post-it">
+                <div class="day-word">
+                    <h3>Citation du jour :</h3>
+                    <textarea id="day-word-content" name="day-word"></textarea>
+                </div>
+                <div class="morning-think">
+                    <h3>Pensées du matin :</h3>
+                    <textarea name="mornig-think" id="morning-think-content"></textarea>
+                </div>
+            </div>
+
+            <div class="grateful">
+                <h3>Je suis reconaissant pour :</h3>
+                <textarea name="grateful" id="grateful-content"></textarea>
+            </div>
+
+            <div class="problem">
+                <h3>Ce qui me pose probleme :</h3>
+                <textarea name="problem" id="problem-content"></textarea>
+            </div>
+
+            <div class="resolve">
+                <h3>Comment le/les résoudre :</h3>
+                <textarea name="resolve" id="resolve-content"></textarea>
+            </div>
+
+            <div class="personal-improvement">
+                <h3>Amélioration personnelle :</h3>
+                <textarea name="personal-improvement" id="personal-improvement-content"></textarea>
+            </div>
+
+            <div class="tomorrow">
+                <h3>Demain, je veux :</h3>
+                <textarea name="tomorrow" id="tomorrow-content"></textarea>
+            </div>
+
+            <div class="evening-think">
+                <h3>Pensées du soir</h3>
+                <textarea name="evening-think" id="evening-think-content"></textarea>
+            </div>
+
+            <div class="day-feeling">
+                <input type="checkbox" name="calm" id="calm"> Calm
+                <input type="checkbox" name="heureux" id="heureux"> Heureux
+                <input type="checkbox" name="apaisé" id="apaisé"> Apaisé
+                <input type="checkbox" name="détendu" id="détendu"> Détendu
+                <input type="checkbox" name="soulagé" id="soulagé"> Soulagé
+                <input type="checkbox" name="triste" id="triste"> Triste
+                <input type="checkbox" name="en-colere" id="en-colere"> En colére
+                <input type="checkbox" name="fatigué" id="fatigué"> Fatigué
+                <input type="checkbox" name="strésser" id="strésser"> Strésser
+                <input type="checkbox" name="anxieu" id="anxieu"> Anxieu
+            </div>
+
+        </div>
+
+    </section>
     <section id="community_form"></section>
 </body>
-<footer></footer>
+
 </html>

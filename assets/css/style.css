@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Delicious";
+  src: url(../fonts/Delicious_Handrawn/DeliciousHandrawn-Regular.ttf);
+}
+.container {
+  max-width: 1750 px;
+}
+
+body {
+  background-color: #f2f2e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+#my_journal h2 {
+  text-align: center;
+  color: #3b5049;
+  font-family: "Poppins";
+  font-size: 3rem;
+}
+#my_journal h3 {
+  font-family: "Poppins";
+  color: #3b5049;
+  font-size: 1.5rem;
+}
+#my_journal textarea {
+  border: 0;
+  background-color: #f2f2e9;
+}
+#my_journal #Date {
+  font-family: "Poppins";
+  color: #3b5049;
+  background-color: #f2f2e9;
+  border: 0px;
+}
+#my_journal label {
+  font-family: "Poppins";
+  color: #3b5049;
+}
+
+/*# sourceMappingURL=style.css.map */

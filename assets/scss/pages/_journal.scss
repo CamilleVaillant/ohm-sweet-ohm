@@ -2,3 +2,44 @@
 
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
+
+
+#my_journal{
+
+
+
+    h2{
+        text-align: center;
+        color: var.$couleur-logo;
+        font-family: "Poppins";
+        font-size: 3rem ;
+    }
+    h3{
+        font-family: "Poppins";
+        color: var.$couleur-logo;
+        font-size: 1.5rem;
+    }
+    textarea{
+        border: 0;
+        background-color: var.$couleur-bg;
+    }
+
+    #Date{
+        font-family: "Poppins";
+        color: var.$couleur-logo;
+        background-color: var.$couleur-bg;
+        border: 0px;
+    }
+
+
+    label{
+        font-family: "Poppins";
+        color: var.$couleur-logo;
+    }
+
+    .happy-time{
+       
+    }
+
+
+}
