@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Poppins";
   src: url(../fonts/Poppins/Poppins-Regular.ttf);
@@ -10,10 +11,6 @@
   max-width: 1750 px;
 }
 
-body {
-  background-color: #f2f2e9;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +18,23 @@ body {
   list-style: none;
 }
 
+#my_journal {
+  background-image: url(../img/image.png);
+  background-position: center;
+  background-size: cover;
+}
+#my_journal .bg-wave {
+  text-align: center;
+}
+#my_journal .bg-wave label {
+  font-size: 2rem;
+}
 #my_journal h2 {
   text-align: center;
   color: #3b5049;
   font-family: "Poppins";
-  font-size: 3rem;
+  font-size: 4rem;
+  padding: 3rem;
 }
 #my_journal h3 {
   font-family: "Poppins";
@@ -35,16 +44,264 @@ body {
 #my_journal textarea {
   border: 0;
   background-color: #f2f2e9;
+  font-family: "Delicious";
+  font-size: 1.5rem;
+  color: #3b5049;
+  border-radius: 4px;
+  resize: none;
+  scrollbar-color: #3b5049 #f2f2e9;
+}
+#my_journal textarea:focus {
+  border: 2px #a8cda2 solid;
+  outline: none;
 }
 #my_journal #Date {
   font-family: "Poppins";
+  font-size: 2rem;
   color: #3b5049;
   background-color: #f2f2e9;
   border: 0px;
+  border-radius: 4px;
+  padding-left: 1rem;
+}
+#my_journal #Date:focus {
+  border: 2px #a8cda2 solid;
+  outline: none;
 }
 #my_journal label {
   font-family: "Poppins";
   color: #3b5049;
+}
+#my_journal .free-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+#my_journal .free-text .happy-time {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .happy-time h3 {
+  margin-bottom: 2rem;
+}
+#my_journal .free-text .day-word {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .day-word h3 {
+  margin-bottom: 2rem;
+}
+#my_journal .free-text .grateful {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .morning-think {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .morning-think h3 {
+  margin-bottom: 2rem;
+}
+#my_journal .free-text .problem {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .resolve {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .personal-improvement {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .tomorrow {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .tomorrow h3 {
+  margin-bottom: 2rem;
+}
+#my_journal .free-text .evening-think {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#my_journal .free-text .evening-think h3 {
+  margin-bottom: 2rem;
+}
+#my_journal .day-feeling {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+  text-align: center;
+  background-color: rgba(168, 205, 162, 0.3960784314);
+  width: 750px;
+  border-radius: 4px;
+  margin: 2rem auto;
+  font-family: "Poppins";
+  color: #3b5049;
+  padding-bottom: 2rem;
+  /* Cache la checkbox par défaut */
+  /* Style de la checkbox cochée */
+  /* Rond blanc à l'intérieur pour représenter l'état coché */
+}
+#my_journal .day-feeling .d-f-1 {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-4 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-5 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-6 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-7 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-8 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-9 {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-10 {
+  grid-column: 5/6;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .d-f-11 {
+  grid-column: 5/6;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#my_journal .day-feeling .round-checkbox {
+  appearance: none; /* Cache la checkbox sans besoin de display: none */
+  width: 15px;
+  height: 15px;
+  background-color: #f2f2e9;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: background-color 0.3s;
+  margin-right: 5px;
+}
+#my_journal .day-feeling .round-checkbox:checked {
+  background-color: #3b5049; /* Couleur lorsque cochée */
 }
 
 /*# sourceMappingURL=style.css.map */

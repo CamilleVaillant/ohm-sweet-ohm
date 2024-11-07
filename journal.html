@@ -12,80 +12,83 @@
 <body>
     <section id="my_journal">
         <div class="container">
-
-
+            
             <!-- container complet dédier au responcive -->
-
-            <h2>Votre Journal De Gratitude.</h2>
-
-            <label for="Date">Date</label>
-            <input type="date" id="Date" name="Date">
-
+            <div class="bg-wave">
+                <h2>Votre Journal De Gratitude.</h2>
+    
+                <label for="Date">Date:</label>
+                <input type="date" id="Date" name="Date">
+            </div>
             <!-- debut de page avec une div dédier a chaque partie customisable part l'utilisateur -->
 
 
+            <div class="bg-green">
 
-            <div class="happy-time">
-                <h3>Moments heureux :</h3>
-                <textarea id="happy-time-content" name="happy-time"></textarea>
-            </div>
+                <div class="free-text">
+                    <div class="happy-time">
+                        <h3>Moments heureux :</h3>
+                        <textarea id="happy-time-content" name="happy-time" rows="10" cols="25"></textarea>
+                    </div>
 
-            <div class="post-it">
-                <div class="day-word">
-                    <h3>Citation du jour :</h3>
-                    <textarea id="day-word-content" name="day-word"></textarea>
+                
+                    <div class="day-word">
+                        <h3>Citation du jour :</h3>
+                        <textarea id="day-word-content" name="day-word" rows="10" cols="25"></textarea>
+                    </div>
+                    <div class="morning-think">
+                        <h3>Pensées du matin :</h3>
+                        <textarea name="mornig-think" id="morning-think-content" rows="10" cols="25"></textarea>
+                    </div>
+                    
+
+                    <div class="grateful">
+                        <h3>Je suis reconaissant pour :</h3>
+                        <textarea name="grateful" id="grateful-content" rows="10" cols="25"></textarea>
+                    </div>
+
+                    <div class="problem">
+                        <h3>Ce qui me pose probleme :</h3>
+                        <textarea name="problem" id="problem-content" rows="10" cols="25"></textarea>
+                    </div>
+
+                    <div class="resolve">
+                        <h3>Comment le/les résoudre :</h3>
+                        <textarea name="resolve" id="resolve-content" rows="10" cols="25"></textarea>
+                    </div>
+
+                    <div class="personal-improvement">
+                        <h3>Amélioration personnelle :</h3>
+                        <textarea name="personal-improvement" id="personal-improvement-content" rows="10" cols="25"></textarea>
+                    </div>
+
+                    <div class="tomorrow">
+                        <h3>Demain, je veux :</h3>
+                        <textarea name="tomorrow" id="tomorrow-content" rows="10" cols="25"></textarea>
+                    </div>
+
+                    <div class="evening-think">
+                        <h3>Pensées du soir :</h3>
+                        <textarea name="evening-think" id="evening-think-content" rows="10" cols="25"></textarea>
+                    </div>
+
                 </div>
-                <div class="morning-think">
-                    <h3>Pensées du matin :</h3>
-                    <textarea name="mornig-think" id="morning-think-content"></textarea>
+
+                <div class="day-feeling">
+                    <div class="d-f-1"><h3>Comment je me sens aujourd'hui</h3></div>
+                    <div class="d-f-2"><input type="checkbox" name="calm" id="calm" class="round-checkbox"> Calme</div>
+                    <div class="d-f-3"><input type="checkbox" name="triste" id="triste" class="round-checkbox"> Triste</div>
+                    <div class="d-f-4"><input type="checkbox" name="apaisé" id="apaisé" class="round-checkbox"> Apaisé</div>
+                    <div class="d-f-5"><input type="checkbox" name="en colere" id="en colere" class="round-checkbox"> En colére</div>
+                    <div class="d-f-6"><input type="checkbox" name="soulagé" id="soulagé" class="round-checkbox"> Soulagé</div>
+                    <div class="d-f-7"><input type="checkbox" name="stressé" id="stressé" class="round-checkbox">Stressé</div>
+                    <div class="d-f-8"><input type="checkbox" name="heureux" id="heureux" class="round-checkbox">Heureux</div>
+                    <div class="d-f-9"><input type="checkbox" name="fatigué" id="fatigué" class="round-checkbox">Fatigué</div>
+                    <div class="d-f-10"><input type="checkbox" name="détendue" id="détendue" class="round-checkbox">Détendue</div>
+                    <div class="d-f-11"><input type="checkbox" name="anxieu" id="anxieu" class="round-checkbox">Anxieu</div>
                 </div>
             </div>
-
-            <div class="grateful">
-                <h3>Je suis reconaissant pour :</h3>
-                <textarea name="grateful" id="grateful-content"></textarea>
-            </div>
-
-            <div class="problem">
-                <h3>Ce qui me pose probleme :</h3>
-                <textarea name="problem" id="problem-content"></textarea>
-            </div>
-
-            <div class="resolve">
-                <h3>Comment le/les résoudre :</h3>
-                <textarea name="resolve" id="resolve-content"></textarea>
-            </div>
-
-            <div class="personal-improvement">
-                <h3>Amélioration personnelle :</h3>
-                <textarea name="personal-improvement" id="personal-improvement-content"></textarea>
-            </div>
-
-            <div class="tomorrow">
-                <h3>Demain, je veux :</h3>
-                <textarea name="tomorrow" id="tomorrow-content"></textarea>
-            </div>
-
-            <div class="evening-think">
-                <h3>Pensées du soir</h3>
-                <textarea name="evening-think" id="evening-think-content"></textarea>
-            </div>
-
-            <div class="day-feeling">
-                <input type="checkbox" name="calm" id="calm"> Calm
-                <input type="checkbox" name="heureux" id="heureux"> Heureux
-                <input type="checkbox" name="apaisé" id="apaisé"> Apaisé
-                <input type="checkbox" name="détendu" id="détendu"> Détendu
-                <input type="checkbox" name="soulagé" id="soulagé"> Soulagé
-                <input type="checkbox" name="triste" id="triste"> Triste
-                <input type="checkbox" name="en-colere" id="en-colere"> En colére
-                <input type="checkbox" name="fatigué" id="fatigué"> Fatigué
-                <input type="checkbox" name="strésser" id="strésser"> Strésser
-                <input type="checkbox" name="anxieu" id="anxieu"> Anxieu
-            </div>
-
         </div>
-
     </section>
     <section id="community_form"></section>
 </body>
