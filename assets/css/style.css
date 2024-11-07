@@ -46,14 +46,15 @@ body h3 {
   color: #3b5049;
 }
 #breath .btn_stone_bg {
-  margin-top: 3rem;
+  margin-top: 5rem;
   background-color: #fbfbf2;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   z-index: 1;
   position: relative;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 #breath .btn_stone_bg img {
   position: absolute;
@@ -61,28 +62,42 @@ body h3 {
   top: 0%;
   left: 51%;
   transform: translate(-50%);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in;
+  transform-style: preserve-3d;
 }
-#breath .btn_stone_bg img:nth-child(1):hover {
-  top: -1%;
+#breath .btn_stone_bg img:nth-child(1) {
+  top: 10%;
+  transform: translate(-50%) rotateX(20deg) rotateY(15deg);
 }
-#breath .btn_stone_bg img:hover:nth-child(2) {
-  transform: translate3d(1, 1, 1, 45deg);
-  top: -3%;
-  left: 45%;
+#breath .btn_stone_bg img:nth-child(2) {
+  top: -5%;
+  left: 35%;
+  transform: translate(-50%) rotateX(-15deg) rotateY(10deg);
 }
 #breath .btn_stone_bg img:nth-child(3) {
+  top: 10%;
+  left: 65%;
+  transform: translate(-50%) rotateX(10deg) rotateY(-20deg);
+  animation-delay: 1.5s;
+}
+#breath .btn_stone_bg:hover {
+  transform: scale(0.9);
+}
+#breath .btn_stone_bg:hover img:nth-child(1) {
+  top: 0%;
+  transform: translate(-50%);
+}
+#breath .btn_stone_bg:hover img:nth-child(2) {
+  top: 0%;
+  left: 51%;
+  transform: translate(-50%);
+  animation-delay: 0.1s;
+}
+#breath .btn_stone_bg:hover img:nth-child(3) {
   top: 24%;
   left: 51%;
   transform: translate(-50%);
-}
-#breath .btn_stone_bg img:nth-child(3):hover {
-  transform: translate3d(-1, -1, -1, 45deg);
-  top: 20%;
-  left: 66%;
-}
-#breath .btn_stone_bg:hover {
-  transform: scale(1.1);
+  animation-delay: 0.2s;
 }
 
 #exercices {
@@ -96,7 +111,7 @@ body h3 {
 #exercices .container {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -116,8 +131,43 @@ body h3 {
   cursor: pointer;
   transition: 0.3s ease;
 }
+#exercices ul a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #3b5049;
+  transition: width 0.4s ease, left 0.4s ease;
+}
 #exercices ul a:hover {
-  color: #f2f2e9;
+  transform: scale(1.2);
+}
+#exercices ul a:hover::before {
+  width: 100%;
+  left: 0;
+}
+#exercices .exercices_card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 100px;
+  perspective: 800px;
+}
+#exercices .exercices_card_container .exercice_card {
+  background-color: red;
+  width: 300px;
+  height: 30rem;
+  margin-top: 5rem;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.1s ease;
+}
+#exercices .exercices_card_container .exercice_card:hover {
+  transform: rotateX(var(--x-rotation, 0deg)) rotateY(var(--y-rotation, 0deg)) scale(1.1);
 }
 
 #popup {

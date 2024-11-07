@@ -40,14 +40,15 @@ body {
     }
 
     .btn_stone_bg {
-        margin-top: 3rem;
+        margin-top: 5rem;
         background-color: #fbfbf2;
         width: 250px;
         height: 250px;
         border-radius: 50%;
         z-index: 1;
         position: relative;
-        transition: .5s ease-in-out;
+        transition: .4s ease-in-out;
+        cursor: pointer;
 
         img {
             position: absolute;
@@ -55,42 +56,52 @@ body {
             top: 0%;
             left: 51%;
             transform: translate((-50%));
-            transition: .5s ease-in-out;
-            // animation-delay: ;
+            transition: .3s ease-in;
+            transform-style: preserve-3d;
         }
 // déplacer les hover sur le parent en indiquant le mouvement sur le child
+
         img:nth-child(1) {
-
-            &:hover {
-                top: -1%;
-            }
+            top: 10%;
+            transform: translate(-50%) rotateX(20deg) rotateY(15deg);
         }
 
-        img:hover:nth-child(2) {
-            transform: translate3d(1, 1, 1, 45deg);
-            top: -3%;
-            left: 45%;
+        img:nth-child(2) {
+            top: -5%;
+            left: 35%;
+            transform: translate(-50%) rotateX(-15deg) rotateY(10deg);
         }
-
-           
         
-
         img:nth-child(3) {
-            top: 24%;
-            left: 51%;
-            transform: translate((-50%));
-
-            &:hover {
-                transform: translate3d(-1, -1, -1, 45deg);
-                top: 20%;
-                left: 66%;
-            }
+            top: 10%;
+            left: 65%;
+            transform: translate(-50%) rotateX(10deg) rotateY(-20deg);
+            animation-delay: 1.5s;
         }
 
         &:hover {
-            transform: scale(1.1);
+            transform: scale(0.9);
         }
-    }
+
+        &:hover img:nth-child(1) {
+            top: 0%;
+            transform: translate((-50%));
+        }
+
+        &:hover img:nth-child(2) {
+            top: 0%;
+            left: 51%;
+            transform: translate((-50%));
+            animation-delay: .1s;
+        }
+
+        &:hover img:nth-child(3) {
+            top: 24%;
+            left: 51%;
+            transform: translate((-50%));
+            animation-delay: .2s;
+        }
+    } 
 }
 
 // PARTIE EXERCICES 
@@ -102,7 +113,7 @@ body {
 
     .container {
         width: 100%;
-        @include mixin.flex;
+        @include mixin.flex(column, center, center);
         text-align: center;
     }
 
@@ -117,12 +128,50 @@ body {
             font-weight:700;
             cursor: pointer;
             transition: .3s ease;
-            
-            &:hover {
-                color: var.$couleur-bg;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 1px;
+                background-color: var.$couleur-logo;
+                transition: width .4s ease, left .4s ease;
             }
+
+            &:hover {
+                transform: scale(1.2);
+
+                &::before {
+                    width: 100%;
+                    left: 0;
+                }
+            } 
         }
     } 
+
+    .exercices_card_container {
+        @include mixin.flex;
+        width: 100%;
+        gap: 100px;
+        perspective: 800px;
+
+        .exercice_card {
+            background-color: red;
+            width: 300px;
+            height: 30rem;
+            margin-top: 5rem;
+            will-change: transform;
+            transform-style: preserve-3d;
+            transition: .1s ease;
+           
+            &:hover {
+                transform: rotateX(var(--x-rotation, 0deg)) rotateY(var(--y-rotation, 0deg)) scale(1.1);
+            }
+        
+        }
+    }
 }
 
 
@@ -168,3 +217,4 @@ body {
 //       background-color: #c6cdc4; 
 //     }
 //   } 
+
