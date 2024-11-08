@@ -1,0 +1,121 @@
+{
+    "lundi": [
+        {
+            "youtube": "https://www.youtube.com/embed/abcd1234",
+            "title": "Exercice Lundi 1",
+            "description": "Description pour l'exercice 1 du lundi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/efgh5678",
+            "title": "Exercice Lundi 2",
+            "description": "Description pour l'exercice 2 du lundi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/ijkl9101",
+            "title": "Exercice Lundi 3",
+            "description": "Description pour l'exercice 3 du lundi."
+        }
+    ],
+    "mardi": [
+        {
+            "youtube": "https://www.youtube.com/embed/mnop2345",
+            "title": "Exercice Mardi 1",
+            "description": "Description pour l'exercice 1 du mardi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/qrst6789",
+            "title": "Exercice Mardi 2",
+            "description": "Description pour l'exercice 2 du mardi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/uvwx0123",
+            "title": "Exercice Mardi 3",
+            "description": "Description pour l'exercice 3 du mardi."
+        }
+    ],
+    "mercredi": [
+        {
+            "youtube": "https://www.youtube.com/embed/yzab4567",
+            "title": "Exercice Mercredi 1",
+            "description": "Description pour l'exercice 1 du mercredi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/cdef8910",
+            "title": "Exercice Mercredi 2",
+            "description": "Description pour l'exercice 2 du mercredi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/ghij1234",
+            "title": "Exercice Mercredi 3",
+            "description": "Description pour l'exercice 3 du mercredi."
+        }
+    ],
+    "jeudi": [
+        {
+            "youtube": "https://www.youtube.com/embed/klmn5678",
+            "title": "Exercice Jeudi 1",
+            "description": "Description pour l'exercice 1 du jeudi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/opqr9101",
+            "title": "Exercice Jeudi 2",
+            "description": "Description pour l'exercice 2 du jeudi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/stuv2345",
+            "title": "Exercice Jeudi 3",
+            "description": "Description pour l'exercice 3 du jeudi."
+        }
+    ],
+    "vendredi": [
+        {
+            "youtube": "https://www.youtube.com/embed/wxyz6789",
+            "title": "Exercice Vendredi 1",
+            "description": "Description pour l'exercice 1 du vendredi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/abcd0123",
+            "title": "Exercice Vendredi 2",
+            "description": "Description pour l'exercice 2 du vendredi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/efgh4567",
+            "title": "Exercice Vendredi 3",
+            "description": "Description pour l'exercice 3 du vendredi."
+        }
+    ],
+    "samedi": [
+        {
+            "youtube": "https://www.youtube.com/embed/ijkl8910",
+            "title": "Exercice Samedi 1",
+            "description": "Description pour l'exercice 1 du samedi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/mnop1234",
+            "title": "Exercice Samedi 2",
+            "description": "Description pour l'exercice 2 du samedi."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/qrst5678",
+            "title": "Exercice Samedi 3",
+            "description": "Description pour l'exercice 3 du samedi."
+        }
+    ],
+    "dimanche": [
+        {
+            "youtube": "https://www.youtube.com/embed/uvwx9101",
+            "title": "Exercice Dimanche 1",
+            "description": "Description pour l'exercice 1 du dimanche."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/yzab2345",
+            "title": "Exercice Dimanche 2",
+            "description": "Description pour l'exercice 2 du dimanche."
+        },
+        {
+            "youtube": "https://www.youtube.com/embed/cdef6789",
+            "title": "Exercice Dimanche 3",
+            "description": "Description pour l'exercice 3 du dimanche."
+        }
+    ]
+}
