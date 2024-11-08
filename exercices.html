@@ -3,16 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicons -->
+     <link rel="stylesheet" href="assets/css/all.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- JAVASCRIPT -->
      <script src="assets/js/exercice.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <header></header>
-    <section id="breath"></section>
-    <section id="exercices"></section>
+    <section id="breath">
+        <div class="container">
+            <div class="breath_title">
+            <h2>Calme et sérénité en une respiration</h2>
+            <h3>Cliquez sur la zen stone pour commencer l'expérience</h3>
+            </div>
+            <div class="btn_stone_bg">
+                <!-- HOVER =  scale(1.1 / 1.2) pour les stones + rotations -->
+                 <!--  -->
+                 <a href="" id="stone_btn">
+                    <div class="stone_wrapper">
+                        <img src="assets/img/stone1.png" alt="Pierre de base de la zen stone utilisée en bouton">
+                        <img src="assets/img/stone2.png" alt="Seconde pierre de la zen stone utilisée en bouton">
+                        <img src="assets/img/stone4.png" alt="Dernière pierre de la zen stone utilisée en bouton">
+                    </div>
+                </a>
+                <div class="wave_background"></div>
+            </div>        
+        </div>
+        <section id="breath_game">
+            <!-- position absolute left0 bottom 50% translate 50% -->
+             <!-- Display none de base puis changement  -->
+            <div id="sideMenu">
+                <div class="menu_container">
+                        <h3>Respirez pleinement</h3>
+                    <div class="popup_detail">
+                        <p>Découvrez la puissance de la cohérence cardiaque pour un bien-être immédiat.Libérez votre esprit du stress quotidien et retrouvez équilibre et sérénité en quelques minutes seulement. Grâce à notre exercice de respiration en cohérence cardiaque, vous allez synchroniser votre respiration avec votre rythme cardiaque, apportant ainsi calme intérieur et apaisement profond.</p>
+                    </div>
+                    <!-- margin 3/5%  -->
+                    <!-- bg image à rajouter un truc sobre -->
+                    <div id="setupBreath" class="game_setup_container">
+                        <div class="setup_card">
+                            <div class="setup_line" id="setupTime">
+                                <h3>Durée</h3>
+                                <input type="text" id="time" name="time" placeholder="Temps en minutes" min="1">
+                                <p id="timeError"></p>
+                            </div>
+                            <div class="setup_line" id="setupVocal">
+                                <h3>Guide vocal</h3>
+                                <label for="vocal">
+                                    <input type="checkbox" id="vocal" name="vocal"> Activer
+                                </label>
+                            </div>
+                            <div class="setup_line" id="setupMusic">
+                                <h3>Musique</h3>
+                                <label for="music">
+                                    <input type="checkbox" id="music" name="music"> Activer
+                                </label>
+                            </div>
+                            <button type="submit" id="setupValidBtn" class="popupClose">Enregistrer</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="" id="popup_close" class="popupClose"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="game_content">
+                <h2>Cohérence cardiaque</h2>
+                <div class="circle"></div>
+            </div>
+            <div id="gameClose"><i class="fa-solid fa-backward"></i></div>
+        </section>
+    </section>
+
+    
+    <section id="exercices">
+        <div class="container">
+            <div class="exercices_title">
+                <h2>Exercices du jour</h2>
+                <ul id="calendar">
+                    <li><a href="#" data-day="lundi">LUNDI</a></li>
+                    <li><a href="#" data-day="mardi">MARDI</a></li>
+                    <li><a href="#" data-day="mercredi">MERCREDI</a></li>
+                    <li><a href="#" data-day="jeudi">JEUDI</a></li>
+                    <li><a href="#" data-day="vendredi">VENDREDI</a></li>
+                    <li><a href="#" data-day="samedi">SAMEDI</a></li>
+                    <li><a href="#" data-day="dimanche">DIMANCHE</a></li>
+                </ul>
+            </div>
+
+            <div class="exercices_card_container">
+                <div class="exercice_card">
+                    <div class="img_abs">
+                        <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="EC_text">
+                        <h3 class="EC_title">Titre de l'exercice</h3>
+                        <p class="EC_text_content">Description de l'exercice</p>
+                    </div>
+                </div>
+                <div class="exercice_card">
+                    <div class="img_abs">
+                        <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="EC_text">
+                        <h3 class="EC_title">Titre de l'exercice</h3>
+                        <p class="EC_text_content">Description de l'exercice</p>
+                    </div>
+                </div>
+                <div class="exercice_card">
+                    <div class="img_abs">
+                        <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="EC_text">
+                        <h3 class="EC_title">Titre de l'exercice</h3>
+                        <p class="EC_text_content">Description de l'exercice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg_white_banner"></div>
 </body>
 <footer></footer>
 </html>
