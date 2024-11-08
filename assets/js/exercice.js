@@ -17,12 +17,41 @@ const gameClose = document.getElementById('gameClose');
 const popupClose = document.getElementsByClassName('popupClose');
 const sideMenu = document.getElementById('sideMenu');
 const validBtn = document.getElementById('setupValidBtn');
+const backgroundMusic = document.getElementById('backgroundMusic');
+const musicCheckbox = document.getElementById('music');
+const vocalCheckbox = document.getElementById('vocal');
+const backgroundChoice = document.getElementById('backgroundChoice');
+const musicChoice = document.getElementById('musicChoice');
 
 
-// click bouton pour ouverture breath Game
 stoneBtn.addEventListener('click', function(event) {
     event.preventDefault();
     game.style.display = "block"
+});
+
+// Gestion du choix de l'arrière-plan
+backgroundChoice.addEventListener('change', function() {
+    const selectedBackground = backgroundChoice.value;
+    game.style.backgroundImage = `url('assets/img/${selectedBackground}')`;
+});
+
+// Gestion du choix de la musique
+musicChoice.addEventListener('change', function() {
+    const selectedMusic = musicChoice.value;
+    backgroundMusic.src = `assets/audio/${selectedMusic}`;
+    backgroundMusic.play();
+    if (selectedMusic === 'rouge.mp3') {
+        game.style.opacity = 0;
+        game.style.backgroundImage = "url('assets/img/woman.jpg')";
+        
+        requestAnimationFrame(() => {
+            game.style.transition = 'opacity 10s ease-in-out';
+            game.style.opacity = 1;
+        });
+    } else {
+        // Pour les autres cas, l'image de fond change directement
+        game.style.backgroundImage = `url('assets/img/${selectedBackground}')`;
+    }
 });
 
 // fermeture du setup breath game avec submit ou bouton close
@@ -53,6 +82,7 @@ document.getElementById('setupBreath').addEventListener('submit', function(event
     } else {
         timeError.style.display = "none";
     }
+
 });
 
 
@@ -75,7 +105,13 @@ const textElement = document.querySelector('.text');
 gameClose.addEventListener('click', function(event) {
     event.preventDefault();
     game.style.display = "none";
+    // stop musique et voix + reset
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
+    voiceOver.pause();
+    voiceOver.currentTime = 0;
 });
+
 
 
 // PARTIE EXERCICES 
