@@ -12,6 +12,32 @@
     <title>Document</title>
 </head>
 <body>
+</head>
+<body>
+    <header>
+            
+        <nav class="navbar">
+            <div class="logo" id="navigation">
+                <img src="assets/img/logo.png" alt="Ohm Sweet Ohm">
+            </div>
+            <ul class="nav-links">
+                <li><a href="main.html">Accueil</a></li>
+                <li><a href="exercices.html">Exercices</a></li>
+                <li><a href="journal.html">Mon journal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <div>
+            <h1>L’esprit s’apaise ici</h1>
+        </div>
+
+    </header>
     <section id="breath">
         <div class="container">
             <div class="breath_title">
@@ -75,7 +101,7 @@
         </section>
     </section>
 
-    
+
     <section id="exercices">
         <div class="container">
             <div class="exercices_title">
@@ -125,5 +151,36 @@
 
     <div class="bg_white_banner"></div>
 </body>
-<footer></footer>
+<footer class="site-footer" id="contact">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>À propos</h2>
+            <p>
+                Bienvenue sur notre plateforme ! Notre équipe est composée de passionnés qui partagent l'objectif de rendre le bien-être accessible à tous. Nous croyons fermement en la philosophie de l'équilibre et de la sérénité. Nous espérons que vous trouverez ici les ressources nécessaires pour atteindre un esprit apaisé.
+            </p>
+        </div>
+
+        <div class="footer-section contact-form">
+            <h2>Contactez-nous</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+
+        <div class="footer-section resources">
+            <h2>Ressources</h2>
+            <ul>
+                <li><a href="#">Lignes d’écoute</a></li>
+                <li><a href="#">Ressources bien-être</a></li>
+                <li><a href="#">Articles et lectures</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Ohm Sweet Ohm. Tous droits réservés.</p>
+    </div>
+</footer>
 </html>
