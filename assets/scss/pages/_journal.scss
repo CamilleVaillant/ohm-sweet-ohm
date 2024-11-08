@@ -306,19 +306,5 @@
     .round-checkbox:checked {
         background-color: var.$couleur-logo; /* Couleur lorsque cochée */
     }
-    
-    /* Rond blanc à l'intérieur pour représenter l'état coché */
-    // .round-checkbox:checked::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 2.5px;
-    //     left: 2.5px;
-    //     width: 10px;
-    //     height: 10px;
-    //     background-color: var.$couleur-bg;
-    //     border-radius: 50%;
-    // }
-    
-        }
 
 }
