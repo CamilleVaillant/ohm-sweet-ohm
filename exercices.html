@@ -38,37 +38,52 @@
                 <div class="menu_container">
                         <h3>Respirez pleinement</h3>
                     <div class="popup_detail">
-                        <p>Découvrez la puissance de la cohérence cardiaque pour un bien-être immédiat.Libérez votre esprit du stress quotidien et retrouvez équilibre et sérénité en quelques minutes seulement. Grâce à notre exercice de respiration en cohérence cardiaque, vous allez synchroniser votre respiration avec votre rythme cardiaque, apportant ainsi calme intérieur et apaisement profond.</p>
+                        <p>Découvrez la puissance de la cohérence cardiaque pour un bien-être immédiat.Libérez votre esprit du stress quotidien et retrouvez équilibre et sérénité en quelques minutes seulement.</p>
                     </div>
                     <!-- margin 3/5%  -->
                     <!-- bg image à rajouter un truc sobre -->
                     <div id="setupBreath" class="game_setup_container">
                         <div class="setup_card">
                             <div class="setup_line" id="setupTime">
-                                <h3>Durée</h3>
+                                    <h3>Durée</h3>
                                 <input type="text" id="time" name="time" placeholder="Temps en minutes" min="1">
                                 <p id="timeError"></p>
                             </div>
-                            <div class="setup_line" id="setupVocal">
-                                <h3>Guide vocal</h3>
-                                <label for="vocal">
-                                    <input type="checkbox" id="vocal" name="vocal"> Activer
-                                </label>
-                            </div>
                             <div class="setup_line" id="setupMusic">
-                                <h3>Musique</h3>
-                                <label for="music">
-                                    <input type="checkbox" id="music" name="music"> Activer
-                                </label>
+                                    <h3>Musique</h3>
+                                <select id="musicChoice">
+                                    <option value="">Aucun son</option>
+                                    <option value="pluie.mp3">Pluie</option>
+                                    <option value="pluie_orage.mp3">Pluie et orage</option>
+                                    <option value="mew.mp3">Musique</option>
+                                    <option value="blanc.mp3">Bruit blanc</option>
+                                    <option value="rouge.mp3">Bruit rouge</option>
+                                </select>
                             </div>
-                            <button type="submit" id="setupValidBtn" class="popupClose">Enregistrer</button>
+                            <div class="setup_line" id="setupBackground">
+                                <h3>Arrière-plan</h3>
+                                <select id="backgroundChoice">
+                                    <option value="">Neutre</option>
+                                    <option value="foret.webp">Forêt tropicale</option>
+                                    <option value="ocean.webp">Océan</option>
+                                    <option value="boreale.webp">Aurore boréale</option>
+                                </select>
+                            </div>
+                            <div class="valid_wrapper">
+                                <button type="submit" id="setupValidBtn" class="popupClose">Enregistrer</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <a href="" id="popup_close" class="popupClose"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
-            <h2>Cohérence cardiaque</h2>
-            <div class="circle"></div>
+            <div class="game_content">
+                <h2>Cohérence cardiaque</h2>
+                <div class="circle"></div>
+                <audio src="" id="backgroundMusic" loop>
+                    <source src="assets/audio/pluie.mp3" type="audio">
+                </audio>
+            </div>
             <div id="gameClose"><i class="fa-solid fa-backward"></i></div>
         </section>
     </section>

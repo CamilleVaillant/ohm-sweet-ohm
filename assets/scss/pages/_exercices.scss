@@ -6,7 +6,6 @@
 body {
     background-color: #f2f2e9;
 
-
     h2 {
         font-size: 4rem;
         color: var.$couleur-logo;
@@ -17,6 +16,7 @@ body {
         font-weight: normal;
         color: var.$couleur-logo;
     }
+    font-family: Poppins;
 }
 
 
@@ -111,7 +111,6 @@ body {
 #exercices {
     @include mixin.flex(column, flex-start, center);
     background-color: var.$couleur-principal;
-    height: 80rem;
 
     .container {
         width: 100%;
@@ -121,6 +120,7 @@ body {
 
     ul {
         @include mixin.flex;
+        flex-wrap: wrap;
         gap: 5rem;
         margin-top: 8rem;
 
@@ -155,15 +155,17 @@ body {
 
     .exercices_card_container {
         @include mixin.flex;
+        flex-wrap: wrap;
         width: 100%;
         gap: 100px;
         perspective: 800px;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
 
         .exercice_card {
             background-color: var.$couleur-secondaire;
             width: 400px;
             height: 30rem;
-            margin-top: 10rem;
             will-change: transform;
             transform-style: preserve-3d;
             transition: .1s ease-out;
@@ -217,9 +219,6 @@ body {
 }
 
 
-
-
-
 #breath_game {
     @include mixin.flex(column, flex-start, center);
     display: none;
@@ -229,10 +228,25 @@ body {
     background-color: #F2F2E9;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center;
     z-index: 1000;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F2F2E9;  
+        opacity: 0.4; 
+        z-index: 999;  
+    }
 
     h2 {
         margin-top: 100px;
+        z-index: 1000;
     }
 
     .circle {
@@ -243,6 +257,11 @@ body {
     animation: breathe 8s ease-in-out infinite;
     margin-top: 10rem;
     cursor: pointer;
+    z-index: 1000;
+  }
+
+  .game_content {
+    @include mixin.flex(column, flex-start, center);
   }
 
   #gameClose {
@@ -255,6 +274,8 @@ body {
     display: block;
     transition: .5s ease;
     cursor: pointer;
+    z-index: 1000;
+
 
     &:hover {
         transform: scale(1.3);
@@ -270,19 +291,21 @@ body {
 #sideMenu {
     @include mixin.flex(row, flex-start, center);
     position: absolute;
-    top: 20%;
+    top: 5%;
     left: -5px;
     box-sizing: border-box;
-    width: 20%;
-    height: 60%;
+    width: 25%;
+    height: 90%;
     background-color: rgba(var.$couleur-principal, .7);
     padding: 0px 30px;
     padding-right: 0;
     border-radius: 6px;
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
+    z-index: 1001;
 
     h3 {
-        font-size: 1.5rem
+        font-size: 1.5rem;
+        padding-top: 20px;
     }
 
     a {
@@ -313,7 +336,7 @@ body {
         width: 100%;
         gap: 15%;
         position: relative;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
 
         h3 {
             font-size: 2rem;
@@ -321,8 +344,8 @@ body {
     }
 
     .popup_detail {
-        margin-bottom: 3rem;
-        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
         @include mixin.flex;
 
         p {
@@ -333,13 +356,19 @@ body {
 
     .setup_card {
         @include mixin.flex(column, center, flex-start);
-        gap: 3rem;
-        width: 80%;
-        margin-left: 5%;
+        gap: .5rem;
+        width: 100%;
+        // margin-left: 5%;
+
+        h3 {
+            font-size: 1rem;
+        }
 
         .setup_line {
             width: 100%;
-            @include mixin.flex(row, space-between, center);
+            @include mixin.flex(column, center, center);
+            text-align: center;
+            gap: 1rem;
         }
 
         input {
@@ -350,27 +379,42 @@ body {
 
         #time {
             height: 30px;
-            width: 40%;
-            padding-left: 5px;
+            width: 60%;
+            background-color: var.$couleur-bg;
+            text-align: center;
 
             &::placeholder {
                 opacity: .5;
             }
         }
 
+        #musicChoice, #backgroundChoice {
+            border: none;
+            background-color: var.$couleur-bg;
+            outline: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .valid_wrapper {
+            width: 100%;
+            margin-top: 20px;
+        }
+
         button {
+            
             border: none;
             width: 90px;
             height: 30px;
             border-radius: 3px;
-            background-color: var.$couleur-secondaire;
+            background-color: var.$couleur-bg;
             transition: .3s ease;
             line-height: 30px;
             cursor: pointer;
             color: var.$couleur-logo;
 
             &:hover {
-                color: var.$couleur-bg;
+                color: var.$couleur-secondaire;
             }
         }
     }
@@ -395,3 +439,37 @@ body {
     }
   } 
 
+// responsive
+
+@media screen and (max-width: 970px) {
+
+    #breath_game {
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    #sideMenu {
+        height: 60%;
+        top: 35%;
+        width: 40%;
+        .popup_detail {
+
+            p {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #sideMenu {
+        width: 80%;
+    }
+
+    #breath_game {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}
