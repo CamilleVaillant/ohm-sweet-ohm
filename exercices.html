@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicons -->
+     <link rel="stylesheet" href="assets/css/all.css">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- JAVASCRIPT -->
@@ -32,42 +34,42 @@
         <section id="breath_game">
             <!-- position absolute left0 bottom 50% translate 50% -->
              <!-- Display none de base puis changement  -->
-            <div id="popup">
-                <div class="popup_head">
-                    <h2>Respirez pleinement</h2>
-                    <!-- btn bg color F2F2E9 + padding -->
-                    <a href="" id="popup_close""><</a>
-                </div>
-                <div class="popup_detail">
-                    <p>Découvrez la puissance de la cohérence cardiaque pour un bien-être immédiat.Libérez votre esprit du stress quotidien et retrouvez équilibre et sérénité en quelques minutes seulement. Grâce à notre exercice de respiration en cohérence cardiaque, vous allez synchroniser votre respiration avec votre rythme cardiaque, apportant ainsi calme intérieur et apaisement profond.</p>
-                </div>
-                <!-- margin 3/5%  -->
-                 <!-- bg image à rajouter un truc sobre -->
-                <div id="setupBreath" class="game_setup_container">
-                    <div class="setup_card">
-                        <div class="setup_line" id="setupTime">
-                            <h3>Durée</h3>
-                            <input type="text" id="time" name="time" placeholder="Entrez un temps en minutes" min="1">
-                            <p id="timeError"></p>
+            <div id="sideMenu">
+                <div class="menu_container">
+                        <h3>Respirez pleinement</h3>
+                    <div class="popup_detail">
+                        <p>Découvrez la puissance de la cohérence cardiaque pour un bien-être immédiat.Libérez votre esprit du stress quotidien et retrouvez équilibre et sérénité en quelques minutes seulement. Grâce à notre exercice de respiration en cohérence cardiaque, vous allez synchroniser votre respiration avec votre rythme cardiaque, apportant ainsi calme intérieur et apaisement profond.</p>
+                    </div>
+                    <!-- margin 3/5%  -->
+                    <!-- bg image à rajouter un truc sobre -->
+                    <div id="setupBreath" class="game_setup_container">
+                        <div class="setup_card">
+                            <div class="setup_line" id="setupTime">
+                                <h3>Durée</h3>
+                                <input type="text" id="time" name="time" placeholder="Temps en minutes" min="1">
+                                <p id="timeError"></p>
+                            </div>
+                            <div class="setup_line" id="setupVocal">
+                                <h3>Guide vocal</h3>
+                                <label for="vocal">
+                                    <input type="checkbox" id="vocal" name="vocal"> Activer
+                                </label>
+                            </div>
+                            <div class="setup_line" id="setupMusic">
+                                <h3>Musique</h3>
+                                <label for="music">
+                                    <input type="checkbox" id="music" name="music"> Activer
+                                </label>
+                            </div>
+                            <button type="submit" id="setupValidBtn" class="popupClose">Enregistrer</button>
                         </div>
-                        <div class="setup_line" id="setupVocal">
-                            <h3>Guide vocal</h3>
-                            <label for="vocal">
-                                <input type="checkbox" id="vocal" name="vocal"> Activer
-                            </label>
-                        </div>
-                        <div class="setup_line" id="setupMusic">
-                            <h3>Musique</h3>
-                            <label for="music">
-                                <input type="checkbox" id="music" name="music"> Activer
-                            </label>
-                        </div>
-                        <button type="submit" id="setupValidBtn">Enregistrer</button>
                     </div>
                 </div>
-                <h2>Cohérence cardiaque</h2>
-                <div class="circle"></div>
+                <a href="" id="popup_close" class="popupClose"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
+            <h2>Cohérence cardiaque</h2>
+            <div class="circle"></div>
+            <div id="gameClose"><i class="fa-solid fa-backward"></i></div>
         </section>
     </section>
     <section id="exercices">
@@ -88,20 +90,29 @@
             <div class="exercices_card_container">
                 <!-- Pour chaque card = image en background de la card -->
                 <div class="exercice_card">
-                    <div class="EC_content">
+                    <div class="img_abs">
+                        <img src="" alt="">
+                    </div>
+                    <div class="EC_text">
                         <h3 class="EC_title">COUCOU TITRE</h3>
                         <p class="EC_text"></p>
                     </div>
                 </div>
                 <div class="exercice_card">
-                    <div class="EC_content">
-                        <h3 class="EC_title"></h3>
+                    <div class="img_abs">
+                        <img src="" alt="">
+                    </div>
+                    <div class="EC_text">
+                        <h3 class="EC_title">COUCOU TITRE</h3>
                         <p class="EC_text"></p>
                     </div>
                 </div>
                 <div class="exercice_card">
-                    <div class="EC_content">
-                        <h3 class="EC_title"></h3>
+                    <div class="img_abs">
+                        <img src="" alt="">
+                    </div>
+                    <div class="EC_text">
+                        <h3 class="EC_title">COUCOU TITRE</h3>
                         <p class="EC_text"></p>
                     </div>
                 </div>
