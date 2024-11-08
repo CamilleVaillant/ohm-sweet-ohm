@@ -2,3 +2,323 @@
 
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
+
+
+#my_journal{
+    background-image: url(../img/image.png);
+    background-position: center;
+    background-size: cover;
+    
+    .bg-wave{
+        text-align: center;
+        label{
+            font-size: 2rem;
+        }
+    }
+
+   
+
+    h2{
+        text-align: center;
+        color: var.$couleur-logo;
+        font-family: "Poppins";
+        font-size: 4rem ;
+        padding: 3rem;
+    }
+    h3{
+        
+        font-family: "Poppins";
+        color: var.$couleur-logo;
+        font-size: 1.5rem;
+    }
+    textarea{
+        border: 0 ;
+        background-color: var.$couleur-bg;
+        font-family: "Delicious";
+        font-size: 1.5rem;
+        color: var.$couleur-logo;
+        border-radius: 4px;
+        resize: none;
+        scrollbar-color: var.$couleur-logo var.$couleur-bg;
+        
+        
+        &:focus {
+            border: 2px var.$couleur-secondaire solid;
+            outline: none;
+            }
+    }
+
+    #Date{
+        font-family: "Poppins";
+        font-size: 2rem;
+        color: var.$couleur-logo;
+        background-color: var.$couleur-bg;
+        border: 0px;
+        border-radius: 4px;
+        padding-left: 1rem;
+        &:focus {
+            border: 2px var.$couleur-secondaire solid;
+            outline: none;
+            }
+    }
+
+
+    label{
+        font-family: "Poppins";
+        color: var.$couleur-logo;
+    }
+
+    .free-text{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1em;
+        .happy-time{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            text-align: center;
+            border-radius: 4px;
+            background-color:#a8cda265 ;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+            h3{
+                margin-bottom: 2rem;
+            }
+        }
+        .day-word{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+            h3{
+                margin-bottom: 2rem;
+            }
+        }
+        .grateful{
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .morning-think{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+            h3{
+                margin-bottom: 2rem;
+            }
+        }
+        
+        .problem{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3; 
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .resolve{
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .personal-improvement{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .tomorrow{
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+            h3{
+                margin-bottom: 2rem;
+            }
+        }
+        .evening-think{
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #a8cda265;
+            width: 300px;
+            margin: 2rem auto;
+            padding: 2rem;
+            h3{
+                margin-bottom: 2rem;
+            }
+        }
+
+
+    }
+
+    .day-feeling{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr;
+       gap: 1em;
+       text-align: center;
+       background-color: #a8cda265;
+       width: 750px;
+       border-radius: 4px;
+       margin: 2rem auto;
+       font-family: "Poppins";
+       color: var.$couleur-logo;
+       padding-bottom: 2rem;
+       
+       .d-f-1{
+        grid-column: 1 / 6;
+        grid-row: 1/ 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-2{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-3{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-4{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-5{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-6{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-7{
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-8{
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-9{
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-10{
+        grid-column: 5 / 6;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       .d-f-11{
+        grid-column: 5 / 6;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+       }
+       /* Cache la checkbox par défaut */
+    .round-checkbox {
+        appearance: none; /* Cache la checkbox sans besoin de display: none */
+        width: 15px;
+        height: 15px;
+        background-color: var.$couleur-bg;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        transition: background-color 0.3s;
+        margin-right: 5px;
+        
+    }
+    
+    /* Style de la checkbox cochée */
+    .round-checkbox:checked {
+        background-color: var.$couleur-logo; /* Couleur lorsque cochée */
+    }
+    
+    /* Rond blanc à l'intérieur pour représenter l'état coché */
+    // .round-checkbox:checked::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 2.5px;
+    //     left: 2.5px;
+    //     width: 10px;
+    //     height: 10px;
+    //     background-color: var.$couleur-bg;
+    //     border-radius: 50%;
+    // }
+    
+        }
+
+}
