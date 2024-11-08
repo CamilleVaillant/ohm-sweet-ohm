@@ -2,6 +2,7 @@
 
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #f2f2e9;
     
-.container{
-    max-width: 1750 px;
+    .container{
+        max-width: 1750 px;
+    }
 }
