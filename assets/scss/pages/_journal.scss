@@ -186,125 +186,125 @@
     }
 
     .day-feeling{
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-       grid-template-rows: 1fr 1fr 1fr;
-       gap: 1em;
-       text-align: center;
-       background-color: #a8cda265;
-       width: 750px;
-       border-radius: 4px;
-       margin: 2rem auto;
-       font-family: "Poppins";
-       color: var.$couleur-logo;
-       padding-bottom: 2rem;
-       
-       .d-f-1{
-        grid-column: 1 / 6;
-        grid-row: 1/ 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-2{
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-3{
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-4{
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-5{
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-6{
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-7{
-        grid-column: 3 / 4;
-        grid-row: 3 / 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-8{
-        grid-column: 4 / 5;
-        grid-row: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-9{
-        grid-column: 4 / 5;
-        grid-row: 3 / 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-10{
-        grid-column: 5 / 6;
-        grid-row: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       .d-f-11{
-        grid-column: 5 / 6;
-        grid-row: 3 / 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-       }
-       /* Cache la checkbox par défaut */
-    .round-checkbox {
-        appearance: none; /* Cache la checkbox sans besoin de display: none */
-        width: 15px;
-        height: 15px;
-        background-color: var.$couleur-bg;
-        border-radius: 50%;
-        cursor: pointer;
-        position: relative;
-        outline: none;
-        transition: background-color 0.3s;
-        margin-right: 5px;
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+           grid-template-rows: 1fr 1fr 1fr;
+           gap: 1em;
+           text-align: center;
+           background-color: #a8cda265;
+           width: 750px;
+           border-radius: 4px;
+           margin: 2rem auto;
+           font-family: "Poppins";
+           color: var.$couleur-logo;
+           padding-bottom: 2rem;
+           
+           .d-f-1{
+            grid-column: 1 / 6;
+            grid-row: 1/ 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-2{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-3{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-4{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-5{
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-6{
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-7{
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-8{
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-9{
+            grid-column: 4 / 5;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-10{
+            grid-column: 5 / 6;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           .d-f-11{
+            grid-column: 5 / 6;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+           }
+           /* Cache la checkbox par défaut */
+        .round-checkbox {
+            appearance: none; /* Cache la checkbox sans besoin de display: none */
+            width: 15px;
+            height: 15px;
+            background-color: var.$couleur-bg;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            outline: none;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+            
+        }
         
+        /* Style de la checkbox cochée */
+        .round-checkbox:checked {
+            background-color: var.$couleur-logo; /* Couleur lorsque cochée */
+        }
     }
-    
-    /* Style de la checkbox cochée */
-    .round-checkbox:checked {
-        background-color: var.$couleur-logo; /* Couleur lorsque cochée */
-    }
-
 }
