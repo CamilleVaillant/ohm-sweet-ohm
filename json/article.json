@@ -1,0 +1,62 @@
+[
+  {
+      "name": "Gestion du Stress au Quotidien",
+      "image": "assets/img/article/img (8).webp",
+      "tags": ["tag3", "tag1", "tag2"],
+      "description": "Découvrez des techniques simples pour mieux gérer le stress au quotidien, incluant la respiration consciente, la méditation, et des stratégies pour réduire les tensions."
+  },
+  {
+      "name": "Cultiver la Positivité",
+      "image": "assets/img/article/img (7).webp",
+      "tags": ["tag4", "tag1", "tag2"],
+      "description": "Apprenez comment adopter un état d'esprit positif pour améliorer votre bien-être. Conseils pratiques pour cultiver la gratitude, l'optimisme et des affirmations positives."
+  },
+  {
+      "name": "Organisation Personnelle Efficace",
+      "image": "assets/img/article/img (6).webp",
+      "tags": ["tag5", "tag1", "tag2"],
+      "description": "Des astuces et techniques pour organiser votre temps, vos tâches et vos objectifs de manière plus efficace, vous permettant de mieux équilibrer travail et vie personnelle."
+  },
+  {
+      "name": "L'Art de la Méditation",
+      "image": "assets/img/article/img (5).webp",
+      "tags": ["tag1", "tag2", "tag3"],
+      "description": "Introduction à la méditation pour tous les niveaux, avec des conseils sur la manière de commencer et des bienfaits pour la santé mentale et physique."
+  },
+  {
+      "name": "Développer la Confiance en Soi",
+      "image": "assets/img/article/img (4).webp",
+      "tags": ["tag4", "tag2", "tag1"],
+      "description": "Des stratégies et exercices pour améliorer votre confiance en vous, et des conseils pour renforcer l'estime de soi au quotidien."
+  },
+  {
+      "name": "Gestion du Temps et Priorisation",
+      "image": "assets/img/article/img (3).webp",
+      "tags": ["tag5", "tag1", "tag3"],
+      "description": "Comment gérer votre emploi du temps efficacement et prioriser vos tâches importantes. Techniques pour une meilleure productivité et réduction du stress lié aux délais."
+  },
+  {
+      "name": "Équilibre entre Vie Professionnelle et Vie Personnelle",
+      "image": "assets/img/article/img (2).webp",
+      "tags": ["tag5", "tag1", "tag2"],
+      "description": "Des conseils pour créer un équilibre sain entre vie professionnelle et vie personnelle, afin d'éviter le burn-out et de maintenir un bien-être global."
+  },
+  {
+      "name": "L'Importance du Sommeil pour le Bien-Être Mental",
+      "image": "assets/img/article/img (1).webp",
+      "tags": ["tag1", "tag2", "tag3"],
+      "description": "Découvrez comment un bon sommeil influence votre santé mentale et des conseils pour améliorer la qualité de vos nuits pour un meilleur bien-être."
+  },
+  {
+      "name": "Techniques de Relaxation",
+      "image": "assets/img/article/img (10).webp",
+      "tags": ["tag3", "tag1", "tag2"],
+      "description": "Apprenez des techniques de relaxation pour réduire le stress et retrouver le calme. Inclut des exercices de respiration et des méthodes de relaxation musculaire."
+  },
+  {
+      "name": "L'Impact de la Gratitude sur le Bien-Être",
+      "image": "assets/img/article/img (9).webp",
+      "tags": ["tag4", "tag1", "tag2"],
+      "description": "Exploration de la pratique de la gratitude et de ses effets positifs sur la santé mentale, avec des idées de pratiques simples pour l'intégrer au quotidien."
+  }
+]

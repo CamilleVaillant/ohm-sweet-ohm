@@ -1,2 +1,87 @@
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
+
+header {
+    background-image: url('../../assets/img/background.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    padding-top: 10px;
+    padding-left: 20px;
+    height: 100px;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding-right: 50px;
+
+    li {
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+        background: white;
+        height: 3px;
+        width: 25px;
+        margin: 5px;
+        transition: 0.4s;
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
