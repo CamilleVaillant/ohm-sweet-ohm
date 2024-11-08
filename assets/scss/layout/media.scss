@@ -1,0 +1,32 @@
+@media (max-width: 810px) {
+    body{
+        main{
+            .section-article{
+                .section{
+                    .cards-container {
+                        grid-template-columns: repeat(2, minmax(150px, 1fr));
+                        
+                    }
+
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 710px) {
+    body{
+        main{
+            .section-article{
+                .section{
+                    .cards-container {
+                        grid-template-columns: 1fr;
+                        
+                        
+                    }
+                }
+            }
+        }
+    }  
+}
