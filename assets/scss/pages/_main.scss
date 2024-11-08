@@ -2,3 +2,263 @@
 
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
+
+.carousel {
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel-track {
+        display: flex;
+        gap: 150px; 
+        animation: scroll 20s linear infinite;
+    }
+
+    img {
+        width: 400px; 
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+    }
+}
+
+.text-marquee {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; 
+    margin-top: 20px; 
+    
+    .text-track {
+        display: flex;
+        gap: 50px; 
+        animation: scroll-text 15s linear infinite;
+    }
+
+    .marquee-text {
+        font-size: 2rem;
+        white-space: nowrap;
+        position: relative;
+        transition: transform 0.3s ease;
+        opacity: 0.8;
+    }
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.section-article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    // Effet de flou lorsque la classe 'blurred' est ajoutée
+    &.blurred {
+        filter: blur(5px);
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #search-bar {
+        width: 700px;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+
+    .filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        margin-left: 140px;
+        width: 700px;
+        justify-content: center;
+
+        label {
+            font-size: 14px;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        max-width: 1000px;
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+
+        .card {
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+            box-shadow: #3B5049;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: box-shadow 0.3s ease; 
+
+            &:hover {
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            button {
+                background-color: #A8CDA2;
+                color: #3B5049;
+                border: none;
+                border-radius: 6px;
+                padding: 2px 7px;
+                cursor: pointer;
+                transition: background-color 0.3s ease; 
+
+                &:hover {
+                    background-color: #3B5049;
+                    color: #f2f2e9;
+                }
+            }
+        }
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+}
+
+
+.site-footer {
+    background-color: #3B5049;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 0 10px;
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #ffffff44;
+                padding-bottom: 5px;
+            }
+
+            p, ul, form {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin: 10px 0;
+                    
+                    a {
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #A8CDA2; 
+                        }
+                    }
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input, textarea {
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                button {
+                    background-color: #A8CDA2;
+                    color: white;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #CDE6C7;
+                        color: #3B5049;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #ffffff44;
+        padding-top: 10px;
+        font-size: 0.8rem;
+    }
+}
