@@ -3,6 +3,14 @@
 @use "../abstract/mixin";
 @use "../abstract/variables" as var;
 
+body{
+    font-family: "Poppins";
+}
+
+main{
+    color:var.$couleur-logo;
+}
+
 .carousel {
     overflow: hidden;
     z-index: 1;
@@ -83,14 +91,16 @@
         padding: 10px;
         font-size: 16px;
         margin-bottom: 20px;
-        border-radius: 6px;
+        border-radius: 4px;
+        border: 1px solid var.$couleur-logo;
+
     }
 
     .filters {
         display: flex;
         gap: 10px;
         margin-bottom: 20px;
-        margin-left: 140px;
+        margin: auto;
         width: 700px;
         justify-content: center;
 
@@ -99,10 +109,27 @@
             cursor: pointer;
             flex: 1;
             text-align: center;
+            
 
             input {
-                margin-right: 5px;
+                margin-right: 2px;
+                appearance: none; /* Cache la checkbox sans besoin de display: none */
+                width: 15px;
+                height: 15px;
+                background-color: var.$couleur-bg;
+                border: 1px solid var.$couleur-logo;
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                top: 2px;
+                outline: none;
+                transition: background-color 0.3s;
             }
+            input:checked{
+                background-color: var.$couleur-logo;
+            }
+
+            
         }
     }
 
@@ -112,25 +139,30 @@
         max-width: 1000px;
         width: 100%;
         gap: 20px;
-        justify-content: center;
+        
+       
 
         .card {
+            margin-top: 10px;
             border: 1px solid #ddd;
+            border-radius: 4px;
             background-color: #ffffff;
             box-shadow: #3B5049;
             padding: 15px;
             text-align: center;
             width: 100%;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-            transition: box-shadow 0.3s ease; 
+            transition: box-shadow 0.3s ease;
+            overflow: hidden; 
 
             &:hover {
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
             }
 
             img {
                 width: 100%;
                 height: auto;
+                border-radius: 4px;
             }
 
             h3 {

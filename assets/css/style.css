@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Delicious";
+  src: url(../fonts/Delicious_Handrawn/DeliciousHandrawn-Regular.ttf);
+}
+@font-face {
+  font-family: "sijusto";
+  src: url(../../fonts/sijusto/SIJUSTO.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -66,10 +78,18 @@ header {
 }
 
 h1 {
-  padding-top: 45%;
+  padding-top: 42%;
   text-align: center;
-  color: #ffffff;
+  color: white;
   font-size: 500%;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+main {
+  color: #3b5049;
 }
 
 .carousel {
@@ -143,13 +163,14 @@ h1 {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
-  border-radius: 6px;
+  border-radius: 4px;
+  border: 1px solid #3b5049;
 }
 .section-article .filters {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  margin-left: 140px;
+  margin: auto;
   width: 700px;
   justify-content: center;
 }
@@ -160,7 +181,21 @@ h1 {
   text-align: center;
 }
 .section-article .filters label input {
-  margin-right: 5px;
+  margin-right: 2px;
+  appearance: none; /* Cache la checkbox sans besoin de display: none */
+  width: 15px;
+  height: 15px;
+  background-color: #f2f2e9;
+  border: 1px solid #3b5049;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+.section-article .filters label input:checked {
+  background-color: #3b5049;
 }
 .section-article .cards-container {
   display: grid;
@@ -168,10 +203,11 @@ h1 {
   max-width: 1000px;
   width: 100%;
   gap: 20px;
-  justify-content: center;
 }
 .section-article .cards-container .card {
+  margin-top: 10px;
   border: 1px solid #ddd;
+  border-radius: 4px;
   background-color: #ffffff;
   box-shadow: #3B5049;
   padding: 15px;
@@ -179,6 +215,7 @@ h1 {
   width: 100%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 .section-article .cards-container .card:hover {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
@@ -186,6 +223,7 @@ h1 {
 .section-article .cards-container .card img {
   width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 .section-article .cards-container .card h3 {
   font-size: 18px;
@@ -296,6 +334,17 @@ h1 {
   border-top: 1px solid rgba(255, 255, 255, 0.2666666667);
   padding-top: 10px;
   font-size: 0.8rem;
+}
+
+@media (max-width: 810px) {
+  body main .section-article .section .cards-container {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 710px) {
+  body main .section-article .section .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
